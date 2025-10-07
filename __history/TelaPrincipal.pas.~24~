@@ -1,0 +1,82 @@
+unit TelaPrincipal;
+
+interface
+
+uses
+  TelaCadastro,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Datasnap.DBClient, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmTelaPrincipal = class(TForm)
+    pnlMenu: TPanel;
+    pnlContatos: TPanel;
+    btnNovo: TButton;
+    grdContatos: TDBGrid;
+    dtsContatos: TDataSource;
+    cdsContatos: TClientDataSet;
+    btnEditar: TButton;
+    btnRemover: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure dtsContatosDataChange(Sender: TObject; Field: TField);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnRemoverClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    const ARQUIVO_XML = 'contatos.xml';
+    procedure CriarEstruturaDataset;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTelaPrincipal: TfrmTelaPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTelaPrincipal.CriarEstruturaDataset;
+begin
+  cdsContatos.FieldDefs.Clear;
+  cdsContatos.FieldDefs.Add('Nome', ftString, 50);
+  cdsContatos.FieldDefs.Add('Telefone', ftString, 20);
+  cdsContatos.FieldDefs.Add('E-mail', ftString, 25);
+  cdsContatos.CreateDataSet;
+end;
+
+procedure TfrmTelaPrincipal.btnEditarClick(Sender: TObject);
+begin
+  TfrmTelaCadastro.Editar(cdsContatos, Self);
+end;
+
+procedure TfrmTelaPrincipal.btnNovoClick(Sender: TObject);
+begin
+  TfrmTelaCadastro.Adicionar(cdsContatos, Self);
+end;
+
+procedure TfrmTelaPrincipal.btnRemoverClick(Sender: TObject);
+begin
+  TfrmTelaCadastro.Remover(cdsContatos, Self);
+end;
+
+procedure TfrmTelaPrincipal.dtsContatosDataChange(Sender: TObject; Field: TField);
+begin
+  btnEditar.Enabled := not cdsContatos.IsEmpty;
+  btnRemover.Enabled := not cdsContatos.IsEmpty;
+end;
+
+procedure TfrmTelaPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  cdsContatos.SaveToFile('contatos.xml', dfXML);
+end;
+
+procedure TfrmTelaPrincipal.FormCreate(Sender: TObject);
+begin
+    CriarEstruturaDataset;
+end;
+
+end.
