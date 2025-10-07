@@ -3,8 +3,11 @@
 	<Transactions>
     <Transaction>2025/08/12 21:03:51.000.851,=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2025/10/06 20:31:21.359,=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/10/06 20:32:00.854,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\TelaPrincipal.dfm=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2025/10/06 20:32:00.854,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\TelaPrincipal.pas=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/10/06 20:32:00.854,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\TelaPrincipal.dfm=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2025/10/06 20:32:05.487,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\AgendaDeContatos.dproj=C:\Users\otavi\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/10/06 20:43:51.697,=C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\Unit1.pas</Transaction>
+    <Transaction>2025/10/06 20:44:06.761,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\TelaCadastro.dfm=C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\Unit1.dfm</Transaction>
+    <Transaction>2025/10/06 20:44:06.761,C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\TelaCadastro.pas=C:\Users\otavi\Meu\Estudos\Curso Delphi\2 - Aplicações Desktop\AgendaDeContatos\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

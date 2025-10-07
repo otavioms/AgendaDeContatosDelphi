@@ -124,7 +124,11 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="TelaPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>frmTelaPrincipal</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="TelaCadastro.pas">
+            <Form>frmTelaCadastro</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
